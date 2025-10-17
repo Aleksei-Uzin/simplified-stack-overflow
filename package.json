@@ -1,0 +1,59 @@
+{
+  "name": "simplified-stack-overflow",
+  "version": "1.0.0",
+  "description": "",
+  "sideEffects": false,
+  "private": true,
+  "scripts": {
+    "build": "webpack --config webpack.prod.js",
+    "start": "webpack serve --open --config webpack.dev.js",
+    "format:check": "prettier --check src/**/*.{ts,tsx,css}",
+    "format:write": "prettier --write src/**/*.{ts,tsx,css}",
+    "lint": "eslint src/**/*.{ts,tsx}",
+    "prepare": "husky"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aleksei-Uzin/simplified-stack-overflow.git"
+  },
+  "keywords": [],
+  "author": "Aleksei Uzin <aleksei.uzin@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aleksei-Uzin/simplified-stack-overflow/issues"
+  },
+  "homepage": "https://github.com/Aleksei-Uzin/simplified-stack-overflow#readme",
+  "devDependencies": {
+    "@eslint/js": "9.37.0",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
+    "css-loader": "7.1.2",
+    "css-minimizer-webpack-plugin": "7.0.2",
+    "eslint": "9.37.0",
+    "eslint-config-prettier": "10.1.8",
+    "eslint-plugin-react": "7.37.5",
+    "globals": "16.4.0",
+    "html-webpack-plugin": "5.6.4",
+    "husky": "9.1.7",
+    "lint-staged": "16.2.4",
+    "mini-css-extract-plugin": "2.9.4",
+    "prettier": "3.6.2",
+    "style-loader": "4.0.0",
+    "ts-loader": "9.5.4",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.46.1",
+    "webpack": "5.102.1",
+    "webpack-cli": "6.0.1",
+    "webpack-dev-server": "5.2.2",
+    "webpack-merge": "6.0.1"
+  },
+  "dependencies": {
+    "@aleksei-uzin/custom-components-lib": "1.12.1",
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
+  },
+  "lint-staged": {
+    "**/*.{ts,tsx}": "eslint --cache --fix",
+    "**/*.{js,css,md}": "prettier --write --ignore-unknown --no-error-on-unmatched-pattern"
+  }
+}
